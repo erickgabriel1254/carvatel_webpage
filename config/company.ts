@@ -9,7 +9,7 @@ export const company = {
   phoneHref: "+59322235047",
   whatsapp: "0995814727",
   whatsappHref: "593995814727",
-  email: "carvatel@grupocarvatel.com",
+  email: "operaciones@grupocarvatel.com",
   schedule: "Lunes a viernes de 08:00 a 17:00",
   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Antonio+de+Ulloa+N27-126+y+Selva+Alegre+Quito+Ecuador",
   googleMapsEmbedUrl: "https://www.google.com/maps?q=Antonio+de+Ulloa+N27-126+y+Selva+Alegre,+Quito,+Ecuador&output=embed",

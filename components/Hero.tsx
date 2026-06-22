@@ -3,7 +3,7 @@ import { whatsappUrl } from "@/config/company";
 
 export function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-[linear-gradient(135deg,#fff_48%,#f8f9fa_100%)] py-20 sm:py-28">
+    <section id="inicio" className="relative overflow-hidden bg-[linear-gradient(135deg,#fff_48%,#f8f9fa_100%)] py-20 sm:py-5">
       <div className="absolute right-0 top-0 h-full w-[42%] dot-grid opacity-70" aria-hidden="true" />
       <div className="container-page relative grid items-center gap-16 lg:grid-cols-[1.08fr_.92fr]">
         <div>

@@ -13,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-lg">
-      <div className="container-page flex h-[78px] items-center justify-between gap-6">
+      <div className="container-page flex h-[85px] items-center justify-between gap-6">
         <a href="#inicio" aria-label="Ir al inicio"><Logo /></a>
         <nav aria-label="Navegación principal" className="hidden items-center gap-7 lg:flex">
           {links.map(([label, href]) => <a key={href} href={href} className="text-sm font-bold text-gray-600 hover:text-[#E30613]">{label}</a>)}
