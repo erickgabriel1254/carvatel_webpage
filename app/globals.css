@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #e30613;
+  --primary-dark: #b8000d;
+  --primary-soft: #fee2e2;
+  --text-dark: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --background-soft: #f8f9fa;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 88px; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text-dark);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+a, button, input, select, textarea { transition: all 180ms ease; }
+button, a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid rgba(227, 6, 19, .28); outline-offset: 3px; }
+
+.container-page { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.section-space { padding-block: 104px; }
+.section-kicker { color: var(--primary); font-size: .75rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.section-title { margin-top: 12px; max-width: 720px; font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 800; letter-spacing: -.045em; line-height: 1.08; }
+.section-copy { margin-top: 20px; max-width: 700px; color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; }
+.card { border: 1px solid var(--border); border-radius: 24px; background: #fff; box-shadow: 0 14px 40px rgba(31, 41, 55, .06); }
+.icon-box { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 15px; background: var(--primary-soft); color: var(--primary); }
+.btn-primary { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px; border-radius: 13px; background: var(--primary); padding: 0 22px; color: #fff; font-weight: 800; box-shadow: 0 10px 24px rgba(227, 6, 19, .19); }
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+.btn-secondary { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 9px; border: 1px solid var(--primary); border-radius: 13px; background: #fff; padding: 0 22px; color: var(--primary); font-weight: 800; }
+.btn-secondary:hover { background: var(--primary-soft); }
+.dot-grid { background-image: radial-gradient(rgba(227, 6, 19, .16) 1.2px, transparent 1.2px); background-size: 19px 19px; }
+
+@media (max-width: 767px) {
+  .container-page { width: min(100% - 28px, 1180px); }
+  .section-space { padding-block: 72px; }
+  .section-copy { font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
