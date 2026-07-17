@@ -16,6 +16,7 @@ type FormStatus = "idle" | "sending" | "success" | "error";
 export function Contact() {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [formStartedAt, setFormStartedAt] = useState(() => Math.floor(Date.now() / 1000));
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -79,7 +80,7 @@ export function Contact() {
                 Gracias por contactar a Carvatel. Recibimos tu solicitud y responderemos por los
                 datos proporcionados.
               </p>
-              <button type="button" onClick={() => setStatus("idle")} className="btn-primary mt-7">
+              <button type="button" onClick={() => { setFormStartedAt(Math.floor(Date.now() / 1000)); setStatus("idle"); }} className="btn-primary mt-7">
                 Enviar otro mensaje
               </button>
               <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-5 text-sm font-bold text-[#E30613] hover:text-[#B8000D]">
@@ -115,6 +116,7 @@ export function Contact() {
                 Sitio web
                 <input name="website" type="text" tabIndex={-1} autoComplete="off" />
               </label>
+              <input name="form_started_at" type="hidden" value={formStartedAt} />
 
               {status === "error" && (
                 <div role="alert" className="flex gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800 sm:col-span-2">

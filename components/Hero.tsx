@@ -35,10 +35,10 @@ export function Hero() {
             </div>
             <div className="mt-6 grid grid-cols-2 gap-4">
               {[
-                [Headphones, "Soporte técnico", "Respuesta especializada"],
-                [Barcode, "Equipos Zebra", "Captura y trazabilidad"],
-                [Radio, "Radios Motorola", "Comunicación operativa"],
-                [Code2, "Software", "Procesos más eficientes"],
+                [Headphones, "Soporte técnico", "Mantenimiento, diagnóstico y reparación"],
+                [Barcode, "Captura de datos", "Equipos para inventario, logística y trazabilidad"],
+                [Radio, "Comunicación empresarial", "Radios y soluciones para operación en campo"],
+                [Code2, "Software a medida", "Sistemas para automatizar procesos"],
               ].map(([Icon, title, copy]) => {
                 const IconComponent = Icon as typeof Headphones;
                 return <div key={title as string} className="rounded-2xl border border-gray-100 bg-gray-50 p-4 sm:p-5"><IconComponent className="mb-5 text-[#E30613]" size={25}/><h2 className="text-sm font-extrabold text-gray-900">{title as string}</h2><p className="mt-1 text-xs leading-5 text-gray-500">{copy as string}</p></div>;

@@ -1,0 +1,37 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="620" rx="36" fill="url(#bg)"/>
+  <circle cx="710" cy="160" r="160" fill="#FEE2E2"/>
+  <circle cx="150" cy="470" r="150" fill="#EEF2FF"/>
+  <g filter="url(#shadow)">
+    <rect x="118" y="115" width="520" height="338" rx="30" fill="#111827"/>
+    <rect x="145" y="154" width="466" height="260" rx="20" fill="#F9FAFB"/>
+    <rect x="145" y="154" width="466" height="52" rx="20" fill="#E30613"/>
+    <circle cx="176" cy="180" r="7" fill="white"/>
+    <circle cx="200" cy="180" r="7" fill="white" opacity=".75"/>
+    <circle cx="224" cy="180" r="7" fill="white" opacity=".5"/>
+    <rect x="184" y="242" width="145" height="122" rx="18" fill="#F3F4F6"/>
+    <rect x="365" y="242" width="190" height="24" rx="12" fill="#111827"/>
+    <rect x="365" y="286" width="156" height="18" rx="9" fill="#D1D5DB"/>
+    <rect x="365" y="324" width="126" height="18" rx="9" fill="#D1D5DB"/>
+    <path d="M217 306L247 333L297 269" stroke="#E30613" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="572" y="315" width="205" height="170" rx="28" fill="white"/>
+    <rect x="612" y="354" width="125" height="18" rx="9" fill="#111827"/>
+    <rect x="612" y="394" width="94" height="14" rx="7" fill="#D1D5DB"/>
+    <rect x="612" y="428" width="110" height="14" rx="7" fill="#E30613"/>
+  </g>
+  <path d="M645 240C694 249 733 288 742 337" stroke="#E30613" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 24"/>
+  <path d="M469 464C515 505 584 511 637 480" stroke="#E30613" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 24"/>
+  <text x="100" y="78" fill="#E30613" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="800" letter-spacing="5">SOFTWARE</text>
+  <text x="100" y="552" fill="#111827" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="800">Procesos conectados y trazables</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F3F4F6"/>
+    </linearGradient>
+    <filter id="shadow" x="80" y="80" width="740" height="460" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#111827" flood-opacity=".15"/>
+    </filter>
+  </defs>
+</svg>

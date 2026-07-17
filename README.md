@@ -2,6 +2,13 @@
 
 Sitio empresarial público desarrollado con Next.js, TypeScript y Tailwind CSS.
 
+## Páginas del sitio
+
+- `/`: landing principal de Carvatel.
+- `/zebra/`: productos Zebra y soporte técnico autorizado.
+- `/motorola/`: radios Motorola, accesorios y comunicación empresarial.
+- `/software/`: servicios de software empresarial, trazabilidad e integraciones.
+
 ## Desarrollo local
 
 ```bash
@@ -20,6 +27,10 @@ npm run export:cpanel
 Next.js generará la carpeta `out/`. Su contenido es completamente estático y no
 requiere Node.js, npm, base de datos ni procesos activos en el hosting.
 
+Las páginas internas se exportan como carpetas con su propio `index.html`, por
+ejemplo `out/zebra/index.html`, `out/motorola/index.html` y
+`out/software/index.html`.
+
 ## Publicar en cPanel
 
 1. Abre **Administrador de archivos** en cPanel.
@@ -32,5 +43,5 @@ requiere Node.js, npm, base de datos ni procesos activos en el hosting.
 
 El formulario envía los mensajes mediante `contact.php`, por lo que el hosting debe
 tener PHP y la función `mail()` habilitados. Los correos se entregan a
-`carvatel@grupocarvatel.com`. WhatsApp y Google Maps usan enlaces externos. Los datos
+`operaciones@grupocarvatel.com`. WhatsApp y Google Maps usan enlaces externos. Los datos
 de contacto se administran desde `config/company.ts`.
