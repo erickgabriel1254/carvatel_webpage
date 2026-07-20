@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
-import { ProductShowcase, type ProductCard } from "./ProductShowcase";
+import { ProductShowcase, type ProductCard, type ProductFilter } from "./ProductShowcase";
 import { whatsappUrl } from "@/config/company";
 
 type DetailBlock = {
@@ -19,6 +19,7 @@ type InternalPageProps = {
   imageAlt: string;
   highlights: string[];
   products?: ProductCard[];
+  productFilters?: ProductFilter[];
   afterProducts?: ReactNode;
   details: DetailBlock[];
   useCases: string[];
@@ -33,6 +34,7 @@ export function InternalPage({
   imageAlt,
   highlights,
   products = [],
+  productFilters = [],
   afterProducts,
   details,
   useCases,
@@ -77,7 +79,7 @@ export function InternalPage({
               </div>
               <Link href="/#contacto" className="btn-secondary self-start">Consultar disponibilidad</Link>
             </div>
-            <ProductShowcase products={products} />
+            <ProductShowcase products={products} filters={productFilters} />
           </div>
         </section>
       )}

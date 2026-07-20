@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 export type ProductCard = {
   name: string;
   category: string;
+  filterId?: string;
   imageSrc: string;
   imageAlt: string;
   summary: string;
@@ -15,12 +16,28 @@ export type ProductCard = {
   techSpecs?: string[];
 };
 
-type ProductShowcaseProps = {
-  products: ProductCard[];
+export type ProductFilter = {
+  id: string;
+  label: string;
+  description?: string;
+  showWhenEmpty?: boolean;
 };
 
-export function ProductShowcase({ products }: ProductShowcaseProps) {
+type ProductShowcaseProps = {
+  products: ProductCard[];
+  filters?: ProductFilter[];
+};
+
+export function ProductShowcase({ products, filters = [] }: ProductShowcaseProps) {
+  const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<ProductCard | null>(null);
+  const filterCounts = filters.reduce<Record<string, number>>((counts, filter) => {
+    counts[filter.id] = products.filter((product) => product.filterId === filter.id).length;
+    return counts;
+  }, {});
+  const visibleFilters = filters.filter((filter) => filter.showWhenEmpty || filterCounts[filter.id] > 0);
+  const visibleProducts = activeFilter === "all" ? products : products.filter((product) => product.filterId === activeFilter);
+  const activeFilterInfo = visibleFilters.find((filter) => filter.id === activeFilter);
 
   useEffect(() => {
     function closeOnEscape(event: KeyboardEvent) {
@@ -33,8 +50,39 @@ export function ProductShowcase({ products }: ProductShowcaseProps) {
 
   return (
     <>
-      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {products.map((product) => (
+      {visibleFilters.length > 0 && (
+        <div className="mt-10 rounded-[28px] border border-gray-100 bg-white p-3 shadow-lg shadow-gray-200/50">
+          <div className="flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={() => setActiveFilter("all")}
+              className={`rounded-2xl px-5 py-3 text-sm font-extrabold transition ${
+                activeFilter === "all" ? "bg-[#E30613] text-white shadow-lg shadow-red-200" : "bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-[#E30613]"
+              }`}
+            >
+              Todos <span className="ml-2 opacity-75">{products.length}</span>
+            </button>
+            {visibleFilters.map((filter) => (
+              <button
+                key={filter.id}
+                type="button"
+                onClick={() => setActiveFilter(filter.id)}
+                className={`rounded-2xl px-5 py-3 text-sm font-extrabold transition ${
+                  activeFilter === filter.id ? "bg-[#E30613] text-white shadow-lg shadow-red-200" : "bg-gray-50 text-gray-700 hover:bg-red-50 hover:text-[#E30613]"
+                }`}
+              >
+                {filter.label} <span className="ml-2 opacity-75">{filterCounts[filter.id] ?? 0}</span>
+              </button>
+            ))}
+          </div>
+          {activeFilterInfo?.description && (
+            <p className="px-2 pb-2 pt-4 text-sm font-semibold leading-6 text-gray-600">{activeFilterInfo.description}</p>
+          )}
+        </div>
+      )}
+
+      <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {visibleProducts.map((product) => (
           <button
             key={product.name}
             type="button"
@@ -56,6 +104,14 @@ export function ProductShowcase({ products }: ProductShowcaseProps) {
           </button>
         ))}
       </div>
+
+      {visibleProducts.length === 0 && (
+        <div className="mt-8 rounded-[28px] border border-dashed border-gray-200 bg-white p-8 text-center">
+          <p className="text-lg font-extrabold text-gray-900">Pronto agregaremos productos en esta categoria.</p>
+          <p className="mt-2 text-sm leading-6 text-gray-600">Mientras tanto puedes consultar disponibilidad y alternativas con nuestro equipo.</p>
+          <Link href="/#contacto" className="btn-secondary mt-5 inline-flex">Consultar disponibilidad</Link>
+        </div>
+      )}
 
       {selectedProduct && (
         <div className="fixed inset-0 z-[80] grid place-items-center bg-gray-950/65 px-4 py-6 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="product-modal-title" onClick={() => setSelectedProduct(null)}>

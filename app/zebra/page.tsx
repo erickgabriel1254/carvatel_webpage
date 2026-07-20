@@ -27,10 +27,23 @@ export default function ZebraPage() {
           "Asesoría para seleccionar lectores, impresoras, tablets y terminales según tu proceso.",
           "Soporte técnico para mantener la continuidad operativa de tus equipos.",
         ]}
+        productFilters={[
+          {
+            id: "pda",
+            label: "PDA / terminales",
+            description: "Computadores móviles, tablets empresariales y terminales de captura para inventario, bodega, campo y trazabilidad.",
+          },
+          {
+            id: "impresoras",
+            label: "Impresoras",
+            description: "Impresoras de escritorio, móviles e industriales para etiquetas, códigos de barras, activos y procesos logísticos.",
+          },
+        ]}
         products={[
           {
             name: "Zebra TC15",
             category: "Computador móvil",
+            filterId: "pda",
             imageSrc: "/images/products/TC15.jpg",
             imageAlt: "Computador móvil Zebra TC15",
             summary: "Terminal móvil empresarial para captura de datos, aplicaciones Android y operación diaria con una inversión controlada.",
@@ -49,6 +62,7 @@ export default function ZebraPage() {
           {
             name: "Zebra TC26",
             category: "Computador móvil",
+            filterId: "pda",
             imageSrc: "/images/products/zebra-tc26.jpg",
             imageAlt: "Computador móvil Zebra TC26",
             summary: "Equipo móvil para captura de datos en rutas, inventario, atención en campo y operaciones que requieren conectividad dentro y fuera de la empresa.",
@@ -67,6 +81,7 @@ export default function ZebraPage() {
           {
             name: "Zebra TC27",
             category: "Computador móvil",
+            filterId: "pda",
             imageSrc: "/images/products/TC27.jpg",
             imageAlt: "Computador móvil Zebra TC27",
             summary: "Nueva generación de la familia TC2x para operaciones móviles que requieren conectividad, lectura de códigos y trabajo fuera de oficina.",
@@ -85,6 +100,7 @@ export default function ZebraPage() {
           {
             name: "Zebra TC53",
             category: "Computador móvil avanzado",
+            filterId: "pda",
             imageSrc: "/images/products/zebra-tc53.jpg",
             imageAlt: "Computador móvil Zebra TC53",
             summary: "Terminal robusta Wi-Fi para captura de datos dentro de instalaciones, inventario, despacho, procesamiento de órdenes y operación en bodega o retail.",
@@ -103,6 +119,7 @@ export default function ZebraPage() {
           {
             name: "Zebra TC78",
             category: "Computador móvil premium",
+            filterId: "pda",
             imageSrc: "/images/products/TC78.jpg",
             imageAlt: "Computador móvil Zebra TC78",
             summary: "Equipo de alto desempeño para equipos de campo que necesitan captura avanzada, comunicación móvil y continuidad operativa.",
@@ -121,6 +138,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ET40",
             category: "Tablet empresarial",
+            filterId: "pda",
             imageSrc: "/images/products/ET40.jpg",
             imageAlt: "Tablet empresarial Zebra ET40",
             summary: "Tablet empresarial para trabajo dentro de instalaciones, atención, inventario, aplicaciones operativas y digitalización de procesos.",
@@ -139,6 +157,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ET45",
             category: "Tablet empresarial móvil",
+            filterId: "pda",
             imageSrc: "/images/products/ET45.jpg",
             imageAlt: "Tablet empresarial Zebra ET45",
             summary: "Tablet para equipos que necesitan movilidad dentro y fuera de la empresa, con enfoque en datos, operación y aplicaciones corporativas.",
@@ -157,6 +176,7 @@ export default function ZebraPage() {
           {
             name: "Zebra MC33XX",
             category: "Terminal para bodega",
+            filterId: "pda",
             imageSrc: "/images/products/MC33XX.jpg",
             imageAlt: "Terminal Zebra MC33XX para bodega",
             summary: "Terminal de captura para bodegas, inventario y centros de distribución que requieren lectura intensiva de códigos de barras.",
@@ -175,6 +195,7 @@ export default function ZebraPage() {
           {
             name: "Zebra MC34",
             category: "Terminal industrial",
+            filterId: "pda",
             imageSrc: "/images/products/MC34.jpg",
             imageAlt: "Terminal Zebra MC34",
             summary: "Equipo industrial para captura de datos en entornos de almacén, distribución y operación con alto volumen de lectura.",
@@ -193,6 +214,7 @@ export default function ZebraPage() {
           {
             name: "Zebra MC94",
             category: "Terminal ultra robusta",
+            filterId: "pda",
             imageSrc: "/images/products/MC94.jpg",
             imageAlt: "Terminal ultra robusta Zebra MC94",
             summary: "Terminal de alto desempeño para entornos industriales exigentes, almacenes grandes y operación intensiva.",
@@ -211,6 +233,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ZD220",
             category: "Impresora de escritorio",
+            filterId: "impresoras",
             imageSrc: "/images/products/ZD220.jpg",
             imageAlt: "Impresora Zebra ZD220",
             summary: "Impresora de escritorio para etiquetas básicas, códigos de barras y procesos de identificación con bajo volumen o punto de atención.",
@@ -229,6 +252,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ZD421",
             category: "Impresora de escritorio",
+            filterId: "impresoras",
             imageSrc: "/images/products/ZD421.jpg",
             imageAlt: "Impresora Zebra ZD421",
             summary: "Impresora de escritorio para empresas que requieren impresión de etiquetas confiable, fácil administración y mejor continuidad.",
@@ -247,6 +271,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ZD621",
             category: "Impresora de escritorio premium",
+            filterId: "impresoras",
             imageSrc: "/images/products/ZD621.jpg",
             imageAlt: "Impresora Zebra ZD621",
             summary: "Impresora de escritorio avanzada para empresas que necesitan mayor desempeño, calidad de impresión y confiabilidad operacional.",
@@ -265,6 +290,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ZQ600",
             category: "Impresora móvil",
+            filterId: "impresoras",
             imageSrc: "/images/products/ZQ600.jpg",
             imageAlt: "Impresora móvil Zebra ZQ600",
             summary: "Impresora móvil para equipos que necesitan generar etiquetas o recibos directamente en campo, pasillo, bodega o ruta.",
@@ -283,6 +309,7 @@ export default function ZebraPage() {
           {
             name: "Zebra ZT411",
             category: "Impresora industrial",
+            filterId: "impresoras",
             imageSrc: "/images/products/ZT411.jpg",
             imageAlt: "Impresora industrial Zebra ZT411",
             summary: "Impresora industrial para alto volumen de etiquetas, trazabilidad, manufactura, bodegas y centros de distribución.",

@@ -119,10 +119,28 @@ export default function MotorolaPage() {
           "Soporte técnico, programación y acompañamiento operativo.",
           "Soluciones orientadas a seguridad, logística, industria y campo.",
         ]}
+        productFilters={[
+          {
+            id: "portatiles",
+            label: "Radios portátiles",
+            description: "Equipos de mano para personal en campo, seguridad, bodega, industria y coordinación diaria.",
+          },
+          {
+            id: "moviles",
+            label: "Radios móviles",
+            description: "Radios para vehículos, bases, flotas y centros de coordinación operativa.",
+          },
+          {
+            id: "bodycams",
+            label: "Bodycams",
+            description: "Cámaras corporales Motorola para evidencia en campo, seguridad privada, operación crítica y supervisión.",
+          },
+        ]}
         products={[
           {
             name: "MOTOTRBO R7",
             category: "Radio digital profesional",
+            filterId: "portatiles",
             imageSrc: "/images/products/motorola-r7.png",
             imageAlt: "Radio Motorola MOTOTRBO R7",
             summary: "Radio digital robusto para ambientes exigentes donde la claridad de audio, la resistencia y la continuidad de comunicación son críticas.",
@@ -141,6 +159,7 @@ export default function MotorolaPage() {
           {
             name: "MOTOTRBO R7 con pantalla",
             category: "Radio digital con interfaz",
+            filterId: "portatiles",
             imageSrc: "/images/products/motorola-r7-display.png",
             imageAlt: "Radio Motorola MOTOTRBO R7 con pantalla",
             summary: "Versión con pantalla y teclado para equipos que necesitan más control, identificación de llamadas y operación avanzada en campo.",
@@ -159,6 +178,7 @@ export default function MotorolaPage() {
           {
             name: "MOTOTRBO R5",
             category: "Radio digital profesional",
+            filterId: "portatiles",
             imageSrc: "/images/motorola/r5.webp",
             imageAlt: "Radio Motorola MOTOTRBO R5",
             summary: "Radio portátil MOTOTRBO para comunicación profesional, pensado para equipos que requieren audio claro, resistencia y operación diaria.",
@@ -177,6 +197,7 @@ export default function MotorolaPage() {
           {
             name: "MOTOTRBO R2",
             category: "Radio digital empresarial",
+            filterId: "portatiles",
             imageSrc: "/images/products/motorola-r2.png",
             imageAlt: "Radio Motorola MOTOTRBO R2",
             summary: "Radio de trabajo diario pensado para comunicación confiable, manejo sencillo y operación continua en empresas, campo, logística o industria.",
@@ -195,6 +216,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DEP250",
             category: "Radio portátil MOTOTRBO",
+            filterId: "portatiles",
             imageSrc: "/images/motorola/dep250.jpg",
             imageAlt: "Radio Motorola DEP250",
             summary: "Radio portátil MOTOTRBO para empresas que necesitan comunicación clara, sencilla y compatible con operaciones analógicas o digitales.",
@@ -211,8 +233,47 @@ export default function MotorolaPage() {
             ],
           },
           {
+            name: "Motorola DEP550e",
+            category: "Radio portátil MOTOTRBO",
+            filterId: "portatiles",
+            imageSrc: "/images/motorola/dep550e.jpeg",
+            imageAlt: "Radio Motorola DEP550e",
+            summary: "Radio portátil digital de la serie DEP 500e para comunicaciones empresariales con audio claro, conectividad y resistencia para operación diaria.",
+            techSpecs: [
+              "Radio digital MOTOTRBO con operación analógica/digital según configuración.",
+              "Opciones de conectividad como Wi-Fi y Bluetooth en la familia DEP 500e.",
+              "Batería de larga duración para turnos extendidos.",
+              "Diseño resistente para uso profesional en campo, seguridad e industria.",
+            ],
+            bullets: [
+              "Equipos operativos que necesitan radios portátiles profesionales.",
+              "Migración de flotas analógicas a comunicación digital MOTOTRBO.",
+              "Seguridad, industria, logística, mantenimiento y coordinación de personal.",
+            ],
+          },
+          {
+            name: "Motorola DEP570e",
+            category: "Radio portátil con pantalla",
+            filterId: "portatiles",
+            imageSrc: "/images/motorola/dep570e.jpg",
+            imageAlt: "Radio Motorola DEP570e",
+            summary: "Radio portátil MOTOTRBO de la serie DEP 500e con pantalla e interfaz para usuarios que requieren mayor control de comunicación.",
+            techSpecs: [
+              "Radio digital MOTOTRBO para redes convencionales o sistemas ampliados según implementación.",
+              "Pantalla e interfaz para navegación, estado y operación por grupos.",
+              "Opciones de conectividad inalámbrica y actualizaciones por aire según configuración.",
+              "Mayor resistencia al agua en la familia DEP 500e, con enfoque de uso profesional.",
+            ],
+            bullets: [
+              "Supervisores y coordinadores que necesitan ver información del radio.",
+              "Operaciones con grupos, canales y flujos de comunicación definidos.",
+              "Ambientes donde se requiere audio claro, resistencia y administración de flota.",
+            ],
+          },
+          {
             name: "Motorola RVA50",
             category: "Radio empresarial en sitio",
+            filterId: "portatiles",
             imageSrc: "/images/motorola/motorola-rva50.jpg",
             imageAlt: "Radio Motorola RVA50",
             summary: "Radio de dos vías para uso empresarial en sitio, pensado para mejorar la coordinación de equipos de trabajo en operaciones diarias.",
@@ -229,8 +290,47 @@ export default function MotorolaPage() {
             ],
           },
           {
+            name: "Motorola VB400",
+            category: "Bodycam profesional",
+            filterId: "bodycams",
+            imageSrc: "/images/motorola/vb400.png",
+            imageAlt: "Cámara corporal Motorola VB400",
+            summary: "Cámara corporal para seguridad y operación en campo, diseñada para capturar video desde la perspectiva del usuario y fortalecer evidencia, trazabilidad y control.",
+            techSpecs: [
+              "Grabación Full HD 1080p.",
+              "Funciones de pre y post grabación para conservar contexto del evento.",
+              "Conectividad Bluetooth y Wi-Fi para administración y operación.",
+              "Cifrado, GPS y opciones de montaje para distintos uniformes según configuración.",
+            ],
+            bullets: [
+              "Seguridad privada, centros comerciales, campus, salud e industria.",
+              "Registro de incidentes y soporte de evidencia audiovisual.",
+              "Equipos que necesitan mayor transparencia y trazabilidad en campo.",
+            ],
+          },
+          {
+            name: "Motorola V500",
+            category: "Bodycam LTE",
+            filterId: "bodycams",
+            imageSrc: "/images/motorola/v500.jpg",
+            imageAlt: "Cámara corporal Motorola V500",
+            summary: "Cámara corporal conectada por LTE para equipos que requieren video, ubicación en vivo y gestión remota desde centro de control.",
+            techSpecs: [
+              "Conectividad LTE para transmisión de video y ubicación en vivo.",
+              "Descarga de evidencia por red móvil para agilizar flujos posteriores al evento.",
+              "Administración remota y mantenimiento sobre redes móviles.",
+              "Diseñada para aportar inteligencia de campo en tiempo real.",
+            ],
+            bullets: [
+              "Operaciones críticas donde el centro de control necesita visibilidad en vivo.",
+              "Seguridad, emergencias, supervisión y respuesta en campo.",
+              "Equipos que requieren evidencia digital con flujo de gestión más ágil.",
+            ],
+          },
+          {
             name: "Motorola TLK 110",
             category: "Radio Wave PTX",
+            filterId: "portatiles",
             imageSrc: "/images/motorola/tlk110.webp",
             imageAlt: "Radio Motorola TLK 110 Wave PTX",
             summary: "Dispositivo PTT por banda ancha para equipos que necesitan comunicación instantánea usando red celular o Wi-Fi, sin depender únicamente de cobertura de radio tradicional.",
@@ -249,6 +349,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola TLK 150",
             category: "Radio vehicular Wave PTX",
+            filterId: "moviles",
             imageSrc: "/images/motorola/tlk150.png",
             imageAlt: "Radio vehicular Motorola TLK 150 Wave PTX",
             summary: "Equipo vehicular Wave PTX para comunicación push-to-talk en flotas, transporte, logística y coordinación móvil.",
@@ -267,6 +368,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DEM 300",
             category: "Radio móvil",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dem300.webp",
             imageAlt: "Radio móvil Motorola DEM 300",
             summary: "Radio móvil para instalación en vehículo o estación, útil cuando se necesita comunicación estable desde una unidad fija o móvil.",
@@ -285,6 +387,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DEM 400",
             category: "Radio móvil",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dem400.webp",
             imageAlt: "Radio móvil Motorola DEM 400",
             summary: "Radio móvil para comunicaciones empresariales que requieren coordinación desde vehículos, bases operativas o centros de control.",
@@ -303,6 +406,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DEM 500",
             category: "Radio móvil",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dem500.jpg",
             imageAlt: "Radio móvil Motorola DEM 500",
             summary: "Radio móvil orientado a flotas y operaciones donde la comunicación desde vehículo o base es parte central del proceso.",
@@ -321,6 +425,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DGM 500e",
             category: "Radio móvil digital",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dgm500e.webp",
             imageAlt: "Radio móvil Motorola DGM 500e",
             summary: "Radio móvil digital para empresas que necesitan una red MOTOTRBO con comunicación clara, canales definidos y operación profesional.",
@@ -339,6 +444,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DGM 5500e",
             category: "Radio móvil digital",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dgm5500e.jpg",
             imageAlt: "Radio móvil Motorola DGM 5500e",
             summary: "Equipo móvil digital de la serie MOTOTRBO para comunicación profesional en flotas, bases y operaciones empresariales.",
@@ -357,6 +463,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DGM 8000e",
             category: "Radio móvil digital avanzado",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dgm8000e.jpg",
             imageAlt: "Radio móvil Motorola DGM 8000e",
             summary: "Radio móvil digital avanzado para redes empresariales con mayor exigencia de coordinación, control y continuidad operativa.",
@@ -375,6 +482,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola DGM 8500e",
             category: "Radio móvil digital avanzado",
+            filterId: "moviles",
             imageSrc: "/images/motorola/dgm8500e.jpg",
             imageAlt: "Radio móvil Motorola DGM 8500e",
             summary: "Radio móvil digital avanzado para operación profesional, supervisión y comunicación de flotas con requerimientos exigentes.",
@@ -393,6 +501,7 @@ export default function MotorolaPage() {
           {
             name: "Motorola TALKABOUT T470",
             category: "Radio portátil para uso ligero",
+            filterId: "portatiles",
             imageSrc: "/images/products/motorola-t470.jpeg",
             imageAlt: "Radio Motorola TALKABOUT T470",
             summary: "Walkie-talkie orientado a actividades, coordinación ligera y entornos donde se necesita comunicación sencilla sin infraestructura compleja.",
