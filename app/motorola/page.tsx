@@ -193,6 +193,42 @@ export default function MotorolaPage() {
             ],
           },
           {
+            name: "Motorola DEP250",
+            category: "Radio portátil MOTOTRBO",
+            imageSrc: "/images/motorola/dep250.jpg",
+            imageAlt: "Radio Motorola DEP250",
+            summary: "Radio portátil MOTOTRBO para empresas que necesitan comunicación clara, sencilla y compatible con operaciones analógicas o digitales.",
+            techSpecs: [
+              "Modo dual analógico/digital para compatibilidad con flotas existentes.",
+              "Tecnología digital con mejor rendimiento de audio frente a radios analógicos.",
+              "Clasificación IP54 para resistencia a polvo y agua.",
+              "Funciones como anuncio de voz y mensajes de texto preprogramados según configuración.",
+            ],
+            bullets: [
+              "Operaciones que están migrando de analógico a digital.",
+              "Seguridad, bodega, industria, comercio y coordinación en sitio.",
+              "Equipos que necesitan comunicación práctica con manejo sencillo.",
+            ],
+          },
+          {
+            name: "Motorola RVA50",
+            category: "Radio empresarial en sitio",
+            imageSrc: "/images/motorola/motorola-rva50.jpg",
+            imageAlt: "Radio Motorola RVA50",
+            summary: "Radio de dos vías para uso empresarial en sitio, pensado para mejorar la coordinación de equipos de trabajo en operaciones diarias.",
+            techSpecs: [
+              "Radio portátil para comunicación empresarial en sitio.",
+              "Diseño robusto para uso diario en entornos comerciales y operativos.",
+              "Operación simple por canales para comunicación entre grupos de trabajo.",
+              "Compatible con accesorios de audio y carga según disponibilidad.",
+            ],
+            bullets: [
+              "Tiendas, bodegas, seguridad, administración y coordinación interna.",
+              "Equipos que necesitan comunicación rápida sin una red compleja.",
+              "Operaciones donde la simplicidad y continuidad son prioridad.",
+            ],
+          },
+          {
             name: "Motorola TLK 110",
             category: "Radio Wave PTX",
             imageSrc: "/images/motorola/tlk110.webp",
