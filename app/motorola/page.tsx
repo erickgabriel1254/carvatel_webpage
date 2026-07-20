@@ -63,6 +63,35 @@ function MotorolaExtraSections() {
       </section>
 
       <section className="section-space bg-[#F8F9FA]">
+        <div className="container-page grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
+          <div>
+            <p className="section-kicker">VideoManager</p>
+            <h2 className="section-title">Gestión centralizada de video y evidencia Motorola</h2>
+            <p className="section-copy">
+              VideoManager es la plataforma de Motorola Solutions para administrar cámaras corporales,
+              organizar grabaciones y mantener control sobre el ciclo de vida de la evidencia digital:
+              carga, revisión, búsqueda, permisos, compartición y eliminación según las políticas de la organización.
+            </p>
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                "Administra bodycams, usuarios, roles y configuraciones desde una sola interfaz.",
+                "Ayuda a ordenar evidencia por eventos, etiquetas, casos y metadatos.",
+                "Permite revisar video, conservar trazabilidad y controlar accesos.",
+                "Complementa cámaras VB400 y V500 para proyectos de seguridad y operación en campo.",
+              ].map((item) => (
+                <div key={item} className="rounded-2xl border border-gray-100 bg-white p-4 text-sm font-bold leading-6 text-gray-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="card overflow-hidden p-5">
+            <Image src="/images/motorola/videomanager.png" alt="Motorola VideoManager para gestión de evidencia" width={760} height={520} className="h-auto w-full rounded-[22px] object-contain" />
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space bg-white">
         <div className="container-page">
           <p className="section-kicker">Frecuencias</p>
           <h2 className="section-title">Servicios para una red de radio bien planificada</h2>
