@@ -102,6 +102,7 @@ export function Contact() {
                   <option>Soporte técnico Motorola</option>
                   <option>Equipos Zebra</option>
                   <option>Radios Motorola</option>
+                  <option>Equipos Hytera</option>
                   <option>Software empresarial</option>
                   <option>Asesoría tecnológica</option>
                 </select>

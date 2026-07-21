@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowUpRight, Barcode, Boxes, Code2, Radio, Settings, Wrench } from "lucide-react";
+import { ArrowUpRight, Barcode, Boxes, Code2, Radio, Settings, ShieldCheck, Wrench } from "lucide-react";
 
 const services = [
   { icon: Wrench, title: "Servicio técnico Zebra", href: "/zebra/", copy: "Soporte, revisión y mantenimiento de equipos Zebra utilizados en logística, inventario, puntos de atención y procesos de trazabilidad." },
   { icon: Radio, title: "Servicio técnico Motorola", href: "/motorola/", copy: "Soporte técnico para radios Motorola, enfocado en mantener la comunicación operativa de equipos de trabajo y áreas críticas." },
   { icon: Barcode, title: "Venta de equipos Zebra", href: "/zebra/", copy: "Asesoría y venta de equipos Zebra para identificación, captura de datos, movilidad y control de procesos empresariales." },
   { icon: Boxes, title: "Venta de radios Motorola", href: "/motorola/", copy: "Venta de radios y equipos Motorola para comunicación empresarial, coordinación operativa y trabajo en campo." },
+  { icon: ShieldCheck, title: "Venta de equipos Hytera", href: "/hytera/", copy: "Radios PoC, radios analógicos, equipos DMR y bodycams Hytera para comunicación y evidencia en campo." },
   { icon: Code2, title: "Software, WMS y soluciones completas", href: "/software/", copy: "Desarrollo a medida, implementación de WMS e integración de sistema con equipos según los requerimientos de cada operación." },
   { icon: Settings, title: "Asesoría tecnológica", href: "/#contacto", copy: "Acompañamiento técnico para seleccionar equipos, soluciones y herramientas adecuadas a las necesidades reales de cada empresa." },
 ];

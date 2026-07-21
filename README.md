@@ -7,6 +7,7 @@ Sitio empresarial público desarrollado con Next.js, TypeScript y Tailwind CSS.
 - `/`: landing principal de Carvatel.
 - `/zebra/`: productos Zebra y soporte técnico autorizado.
 - `/motorola/`: radios Motorola, accesorios y comunicación empresarial.
+- `/hytera/`: radios PoC, radios analógicos/digitales y bodycams Hytera.
 - `/software/`: servicios de software empresarial, trazabilidad e integraciones.
 
 ## Desarrollo local
@@ -28,8 +29,8 @@ Next.js generará la carpeta `out/`. Su contenido es completamente estático y n
 requiere Node.js, npm, base de datos ni procesos activos en el hosting.
 
 Las páginas internas se exportan como carpetas con su propio `index.html`, por
-ejemplo `out/zebra/index.html`, `out/motorola/index.html` y
-`out/software/index.html`.
+ejemplo `out/zebra/index.html`, `out/motorola/index.html`,
+`out/hytera/index.html` y `out/software/index.html`.
 
 ## Publicar en cPanel
 

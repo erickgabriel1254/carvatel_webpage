@@ -7,6 +7,7 @@ const links = [
   ["Servicios", "/#servicios"],
   ["Productos Zebra", "/zebra/"],
   ["Productos Motorola", "/motorola/"],
+  ["Productos Hytera", "/hytera/"],
   ["Software empresarial", "/software/"],
   ["Contacto", "/#contacto"],
 ];

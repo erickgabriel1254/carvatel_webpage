@@ -15,6 +15,7 @@ const links = [
 const productLinks = [
   ["Productos Zebra", "/zebra/"],
   ["Productos Motorola", "/motorola/"],
+  ["Productos Hytera", "/hytera/"],
 ] as const;
 
 export function Header() {

@@ -14,7 +14,7 @@ export function Hero() {
             Soporte, equipos e <span className="text-[#E30613]">innovación</span> para tu empresa
           </h1>
           <p className="mt-7 max-w-[650px] text-lg leading-8 text-gray-600">
-            Ayudamos a mantener tus operaciones conectadas con soporte técnico especializado, soluciones de software y equipos empresariales Zebra y Motorola.
+            Ayudamos a mantener tus operaciones conectadas con soporte técnico especializado, soluciones de software y equipos empresariales Zebra, Motorola y Hytera.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-primary">Solicitar asesoría <ArrowRight size={18} /></a>
